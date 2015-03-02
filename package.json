@@ -1,0 +1,16 @@
+{
+	"name":"ent-edt-rss-reader",
+	"author":"AmiralSAS",
+	"description":"timetable-rss-reader",
+	"version":"0.0.1",
+	"dependencies":{
+		"colors":">=0.6.x",
+		"express":">=3.3.4",
+		"socket.io":">=0.9.13",
+		"socket.io-client":"latest",
+		"feedparser":"latest"
+	},
+	"engines":{
+		"node":"0.10.1"
+	}
+}
