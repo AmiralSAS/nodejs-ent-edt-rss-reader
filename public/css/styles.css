@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+body {
+  padding-top: 50px;
+}
+
+#timetable .table{
+	font-size: 9px;
+}
+
+.cache{
+	display: none;
+	background-color:rgba(0, 0, 0, 0.8);
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;}
+
+.displayNone{
+	display: none;
+}
+
+.hour, thead{
+	background-color: #AFF;
+}

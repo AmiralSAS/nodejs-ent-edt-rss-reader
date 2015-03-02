@@ -1,0 +1,126 @@
+﻿<html>
+    <head>
+        <title>ENT Lecteur RSS d'Emplois du Temps</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="./favicon.png">
+        <link rel="stylesheet" media="screen" type="text/css" href="./css/normalize.css" />
+        <link rel="stylesheet" media="screen" type="text/css" href="./css/bootstrap.min.css" />
+        <link rel="stylesheet" media="screen" type="text/css" href="./css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" media="screen" type="text/css" href="./css/animations.css" />
+        <link rel="stylesheet" media="screen" type="text/css" href="./css/styles.css" />
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="./js/vendor/html5shiv.js"></script>
+          <script src="./js/vendor/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">ENT EDT</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Accueil</a></li>
+                        <li><a href="#about">A propos</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <div class="container">
+            <h1>ENT Emplois du Temps</h1>
+
+            <div class="table-responsive" id="timetable">
+                <table class="table table-bordered table-condensed text-center">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Lundi</th>
+                            <th>Mardi</th>
+                            <th>Mercredi</th>
+                            <th>Jeudi</th>
+                            <th>Vendredi</th>
+                            <th>Samedi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="hour">7H00</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                        </tr>
+                        <tr>
+                            <td class="hour">7H30</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                        </tr>
+                        <tr>
+                            <td class="hour">8H00</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                        </tr>
+                        <tr>
+                            <td class="hour">8H30</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                            <td>Table cell</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button id="buttonTest" class="topcoat-button--large--cta">Test</button>
+
+            <div id="testContent">
+            </div>
+        </div><!-- /.container -->
+
+
+        <div id="hiddenElements" class="cache">
+            <div id="templateTarget">
+                <ul>
+                    <li>Cours   : {{details.lesson}}</li>
+                    <li>Groupe  : {{details.group}}</li>
+                    <li>Reste   : {{datas.details.diverse}}</li>
+                    <li>Date    : {{date.day}}/{{date.month}}/{{date.year}}</li>
+                    <li>Heure   : {{date.hourBegin.hour}}h{{date.hourBegin.minute}} - {{date.hourEnd.hour}}h{{date.hourEnd.minute}}</li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="./js/vendor/jquery-1.9.1.js"></script>
+        <script src="./js/vendor/bootstrap.min.js"></script>
+        <script src="./js/vendor/mustache.js"></script>
+        <script src="./js/vendor/prototype-1.7.1.js"></script>
+        <script src="http://localhost/socket.io/socket.io.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
