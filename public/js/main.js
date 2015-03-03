@@ -4,9 +4,7 @@ jQuery(function ($){
     var template = $("#templateTarget").clone();
     console.log(template);
     var feedurl = [];
-    feedurl[0] = "https://sedna.univ-fcomte.fr/direct/gwtdirectplanning/rss?data=bd72d825015315fea96513244aa666636c57429c2e59eabab5b89fd64d32094debf28fac6d8ee86193a1cf11c1e118100c06f73294a028d434b37e90be3096b59ef5e799eaa34c26";
-    feedurl[1] = "https://sedna.univ-fcomte.fr/direct/gwtdirectplanning/rss?data=bd72d825015315fea96513244aa666636c57429c2e59eaba8a9ded144fb48e0cebf28fac6d8ee86193a1cf11c1e118100c06f73294a028d434b37e90be3096b59ef5e799eaa34c26";
-    feedurl[2] = "https://sedna.univ-fcomte.fr/direct/gwtdirectplanning/rss?data=bd72d825015315fea96513244aa66663fc952a091129c33761912fe7260cb507ebf28fac6d8ee86193a1cf11c1e118100c06f73294a028d434b37e90be3096b59ef5e799eaa34c26";
+    // feedurl[0] = "https://sedna.univ-fcomte.fr/direct/gwtdirectplanning/rss?data=bd72d825015315feb8cbbaa6aa4760525f7efa635e9ed7a6c0b409cfe741de5fd8f366b5da3261bfa4003da0997decdfb08fc13fac6cfa4e6f336dfff824d5c8bbbba47e59a23ab74441aff2d26d81d1db7688b5014cdf6c157990d0456e1f4f";
 
 
     socket.on("connectionValid", function(){
@@ -14,14 +12,19 @@ jQuery(function ($){
     });
 
     $("#buttonTest").click(function(){
+        $("#textarea_for_json_result").val( "" );
         console.log("clientSendRssUrl");
+
         socket.emit("clientSendRssUrl", {
-            feedUrl : feedurl[0]
+            // feedUrl : feedurl[0]
+            feedUrl : $("#rssUrl").val()
         });
     });
 
     socket.on("returnFeed", function(datas){
       addContent(datas);
+      var result = JSON.stringify(datas);
+      $("#textarea_for_json_result").val( $("#textarea_for_json_result").val() +"\n\n"+ result );
     });
 
     function addContent( datas ){
