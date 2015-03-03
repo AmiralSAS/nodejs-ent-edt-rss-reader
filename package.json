@@ -8,6 +8,7 @@
 		"express":">=3.3.4",
 		"socket.io":">=0.9.13",
 		"socket.io-client":"latest",
+		"request":"latest",
 		"feedparser":"latest"
 	},
 	"engines":{
