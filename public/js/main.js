@@ -24,7 +24,7 @@ jQuery(function ($){
     socket.on("returnFeed", function(datas){
       addContent(datas);
       var result = JSON.stringify(datas);
-      $("#textarea_for_json_result").val( $("#textarea_for_json_result").val() +"\n\n"+ result );
+      $("#textarea_for_json_result").val( $("#textarea_for_json_result").val() + result + "\n\n" );
     });
 
     function addContent( datas ){
