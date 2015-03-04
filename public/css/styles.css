@@ -24,3 +24,17 @@ body {
 .hour, thead{
 	background-color: #AFF;
 }
+
+.content{
+	width: 960px; 
+}
+#rssUrl{
+	background-color: #ffa;
+	width: 100%;
+}
+
+#textarea_for_json_result{
+	background-color: #ffa;
+	width: 100%;
+	height: 256px;
+}
